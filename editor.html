@@ -62,7 +62,10 @@
       if (hash) {
         ref = ref.child(hash);
       } else {
-        ref = ref.push(); // generate unique location.
+        var candidate = prompt("Please enter candiate's name", "Harry Potter");
+        candidate = candidate.replace(/[^a-zA-Z ]/g, "").trim().replace(/\s+/g, '-').toLowerCase() + "-" + Math.floor((Math.random() * 9000) + 1000);
+        ref = ref.child(candidate);
+        //ref = ref.push(); // generate unique location.
         window.location = window.location + '#' + ref.key; // add it as a hash to the URL.
       }
       if (typeof console !== 'undefined') {
