@@ -141,6 +141,22 @@ iframe {
   margin-top: 0;
   margin-bottom: 15px;
 }
+.header .profile-content .social-grid {
+  display: inline-grid;
+  grid-template-columns: max-content repeat(4, 36px);
+  align-items: center;
+  column-gap: 12px;
+  row-gap: 12px;
+  text-align: left;
+  margin-top: 15px;
+}
+.header .profile-content .social-grid .social-label {
+  font-weight: 700;
+  color: #49515a;
+  font-size: 16px;
+  line-height: 1;
+}
+.header .profile-content .social-grid a,
 .header .profile-content .social a {
   background: #b0b7bf;
   width: 36px;
@@ -157,9 +173,11 @@ iframe {
   color: #fff;
   text-align: center;
 }
+.header .profile-content .social-grid a:hover,
 .header .profile-content .social a:hover {
   background: #778492;
 }
+.header .profile-content .social-grid a .fa,
 .header .profile-content .social a .fa {
   font-size: 20px;
   padding-top: 8px;
@@ -526,12 +544,35 @@ iframe {
     float: none !important;
     text-align: center;
   }
+  .header .profile-content .social-grid {
+    display: inline-grid;
+    margin: 15px auto 0;
+    text-align: left;
+  }
   .header .btn {
     margin-top: 30px;
     float: none !important;
   }
   .project-image {
     margin-bottom: 15px;
+  }
+}
+@media (max-width: 360px) {
+  .header .profile-content .social-grid {
+    grid-template-columns: max-content repeat(4, 32px);
+    column-gap: 8px;
+    row-gap: 10px;
+  }
+  .header .profile-content .social-grid .social-label {
+    font-size: 14px;
+  }
+  .header .profile-content .social-grid a {
+    width: 32px;
+    height: 32px;
+  }
+  .header .profile-content .social-grid a .fa {
+    font-size: 16px;
+    padding-top: 8px;
   }
 }
 /* Small devices (tablets, 768px and up) */
